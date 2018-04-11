@@ -29,3 +29,4 @@ end
 #
 # And I should see "Name: (2017 YR1)"
 # And I should see "NEO Reference ID: 3794979"
+#<%= @start_date %> <%= "has #{number} potentially dangerous near earth objects" %> -->
