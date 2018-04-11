@@ -5,7 +5,7 @@ require 'rails_helper'
 #
 
 describe "As a guest user" do
-  it "will show the most dangerous day" do
+  xit "will show the most dangerous day" do
     visit '/'
 
     fill_in "start_date", with: "2018-01-01"
