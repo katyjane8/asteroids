@@ -1,0 +1,4 @@
+<%= "Most Dangerous Day" %><br>
+<%= @start_date %> - <%= @end_date %><br>
+<% Faraday.get("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=rzemllHsSyIA3cy6rsMRYd9gUaTGMIaMIySZ8LbJ") %>
+<%= @start_date %> <%= "has #{number} potentially dangerous near earth objects" %>
