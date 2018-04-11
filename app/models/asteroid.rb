@@ -3,12 +3,19 @@ class Asteroid
   :is_potentially_hazardous_asteroid, :close_approach_data
 
   def initialize(attrs)
+    require "pry"; binding.pry
     @date = attrs["date"]
     @name = attrs["name"]
     @neo_reference_id = attrs["neo_reference_id"]
     @is_potentially_hazardous_asteroid = attrs["is_potentially_hazardous_asteroid"]
     @close_approach_data = attrs["close_approach_data"]
   end
+
+  # def get_name(attrs)
+  #   attrs.map do |x|
+  #     x["name"]
+  #   end
+  # end
 end
 
 #

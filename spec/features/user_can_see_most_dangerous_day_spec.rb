@@ -2,10 +2,8 @@ require 'rails_helper'
 # Feature: A guest user visits the root page and enters a start date and end date.
 # The resulting page will display the most dangerous day in that range based on which day has the most `is_potentially_dangerous_asteroid` set to `true`.
 # Given the scenario below, it should be January 1, 2018 with 3 potentially dangerous asteroids.
-#
-
 describe "As a guest user" do
-  xit "will show the most dangerous day" do
+  it "will show the most dangerous day" do
     visit '/'
 
     fill_in "start_date", with: "2018-01-01"
@@ -29,6 +27,7 @@ end
 #
 # And I should see "Name: (2017 YR1)"
 # And I should see "NEO Reference ID: 3794979"
+
 #<%= @start_date %> <%= "has #{number} potentially dangerous near earth objects" %> -->
 # <% @asteroids.each do |a| %>
 #   <%= a.name %>

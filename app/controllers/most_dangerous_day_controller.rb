@@ -7,9 +7,17 @@ class MostDangerousDayController < ApplicationController
 
     response = Faraday.get("https://api.nasa.gov/neo/rest/v1/feed?start_date=2018-01-01&end_date=2018-01-07&api_key=rzemllHsSyIA3cy6rsMRYd9gUaTGMIaMIySZ8LbJ")
     raw_data = JSON.parse(response.body, symbolize_headers: true)
-    # @asteroids = raw_data["near_earth_objects"].map do |result|
-    #   # result.each do |values|
-    #     Asteroid.new(result)
-    # end
+    @date = raw_data["near_earth_objects"].each do |result|
+      result.each do |values|
+        values.first
+      end
+    end
+    @asteroids = @date.map do |result|
+      result.map do |values|
+        values.map do |x|
+          Asteroid.new(x)
+        end
+      end
+    end
   end
 end

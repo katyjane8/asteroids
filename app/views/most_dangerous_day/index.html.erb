@@ -1,2 +1,10 @@
 <%= "Most Dangerous Day" %><br>
 <%= @start_date %> - <%= @end_date %><br>
+#<%= @start_date %> <%= "has #{number} potentially dangerous near earth objects" %> -->
+# <% @asteroids.each do |a| %>
+#   <%= a.name %>
+#   <%= a.neo_reference_id %>
+#   <%= a.is_potentially_hazardous_asteroid %>
+   <%= a.close_approach_data %>
+ <% end  %>
+<%= @date %>
