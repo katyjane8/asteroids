@@ -30,3 +30,9 @@ end
 # And I should see "Name: (2017 YR1)"
 # And I should see "NEO Reference ID: 3794979"
 #<%= @start_date %> <%= "has #{number} potentially dangerous near earth objects" %> -->
+# <% @asteroids.each do |a| %>
+#   <%= a.name %>
+#   <%= a.neo_reference_id %>
+#   <%= a.is_potentially_hazardous_asteroid %>
+#   <%= a.close_approach_data %>
+# <% end  %>
